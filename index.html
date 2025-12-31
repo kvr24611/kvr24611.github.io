@@ -530,7 +530,7 @@
                         </abbr>&nbsp;(111) 111-1111
                     </address> -->
 
-                    <form method="POST" action="https://formspree.io/f/meeojkoy"
+                    <form id="contact-form" method="POST" action="https://formspree.io/f/meeojkoy"
                         style="position:relative; z-index:9999;">
                         <div class="row">
                             <div class="col-md-6">
@@ -702,6 +702,13 @@
             // Run the show!
             filterList.init();
 
+        });
+    </script>
+    <script>
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) {
+                document.getElementById("contact-form").reset();
+            }
         });
     </script>
 
